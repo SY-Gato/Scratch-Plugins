@@ -37,4 +37,4 @@ class utilityFunctionsAddon {
     }
   }
 }
-Scratch.extensions.register(new UtilityFunctionsAddon());
+Scratch.extensions.register(new utilityFunctionsAddon());
