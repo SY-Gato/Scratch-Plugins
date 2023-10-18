@@ -35,8 +35,8 @@ class utilityFunctionsAddon {
         STRING_CASE_MENU: {
           acceptReporters: true,
           items: ['Uppercase', 'Lowercase']
-        }
-      }
+        },
+      },
     };
   }
 
