@@ -16,8 +16,8 @@ class utilityFunctionsAddon {
             CASE: {
               type: Scratch.ArgumentType.STRING,
               menu: 'STRING_CASE_MENU'
-            }
-          }
+            },
+          },
         },
         {
           opcode: 'fetchdatafromurl',
@@ -27,9 +27,9 @@ class utilityFunctionsAddon {
             TARGETURL: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'https://extensions.turbowarp.org/hello.txt'
-            }
-          }
-        }
+            },
+          },
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
