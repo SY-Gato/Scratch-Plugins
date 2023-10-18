@@ -47,17 +47,17 @@ class utilityFunctionsAddon {
       return args.TEXT.toString().toLowerCase();
     }
   }
-  fetchdatafromurl(args) {
-    try {
-      fetch(args.TARGETURL, { method: 'GET' });
-      .then((response) => {
-        return response;
-      } else {
-        return '';
-      });
-    } catch (errorthing){
-      return '';
-    }
+  //fetchdatafromurl(args) {
+    //try {
+      //fetch(args.TARGETURL, { method: 'GET' });
+      //.then((response) => {
+        //return response;
+      //} else {
+        //return '';
+      //});
+    //} catch (errorthing){
+      //return '';
+    //}
   }
 }
 Scratch.extensions.register(new utilityFunctionsAddon());
