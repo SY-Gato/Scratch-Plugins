@@ -48,6 +48,16 @@ class utilityFunctionsAddon {
     }
   }
   fetchdatafromurl(args) {
-    return fetch(args.TARGETURL, {method: 'GET'});
+    try {
+      fetch(args.TARGETURL, { method: 'GET' });
+      .then((response) => {
+        return response;
+      } else {
+        return '';
+      });
+    } catch (errorthing){
+      return '';
+    }
+  }
 }
 Scratch.extensions.register(new utilityFunctionsAddon());
