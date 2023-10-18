@@ -16,5 +16,25 @@ class utilityFunctionsAddon {
             CASE: {
               type: Scratch.ArgumentType.STRING,
               menu: 'STRING_CASE_MENU'
+            }
+          }
+        }
+      ],
+      menus: {
+        STRING_CASE_MENU: {
+          acceptReporters: true,
+          items: ['Uppercase', 'Lowercase']
+        }
+      }
+    };
+  }
+
+  converttextcase(args) {
+    if (args.CASE === 'Uppercase') {
+      return args.TEXT.toString().toUpperCase();
+    } else {
+      return args.TEXT.toString().toLowerCase();
+    }
   }
 }
+      
