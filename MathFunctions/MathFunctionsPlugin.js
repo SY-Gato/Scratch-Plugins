@@ -1,3 +1,5 @@
-class mathFunctionsAddon() {
+class mathFunctionsAddons { 
+  getInfo() {
 
+  }
 }
