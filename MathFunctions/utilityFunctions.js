@@ -18,6 +18,17 @@ class utilityFunctionsAddon {
               menu: 'STRING_CASE_MENU'
             }
           }
+        },
+        {
+          opcode: 'fetchdatafromurl',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'fetch data from [TARGETURL] with method GET',
+          arguments: {
+            TARGETURL: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'https://extensions.turbowarp.org/hello.txt'
+            }
+          }
         }
       ],
       menus: {
@@ -36,5 +47,7 @@ class utilityFunctionsAddon {
       return args.TEXT.toString().toLowerCase();
     }
   }
+  fetchdatafromurl(args) {
+    return fetch(args.TARGETURL, {method: 'GET'});
 }
 Scratch.extensions.register(new utilityFunctionsAddon());
