@@ -15,6 +15,6 @@ class utilityFunctionsAddon {
             },
             CASE: {
               type: Scratch.ArgumentType.STRING,
-
+              menu: 'STRING_CASE_MENU'
   }
 }
