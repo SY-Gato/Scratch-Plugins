@@ -48,12 +48,12 @@ class utilityFunctionsAddon {
     }
   }
   fetchdatafromurl(args) {
-    fetch(args.TARGETURL, { method: 'GET' })
-      .then((response) => {
-      return response;
-    } else {
-      return '';
-    });
+    //fetch(args.TARGETURL, { method: 'GET' })
+      //.then((response) => {
+      //return response;
+    //} else {
+      //return '';
+    //});
     }
   }
 }
