@@ -48,6 +48,15 @@ class utilityFunctionsAddon {
     }
   }
   fetchdatafromurl(args) {
+    try {
+      const response = await fetch(args.TARGETURL, {
+        method: 'GET',
+        body: json.stringify(data),
+      });
+      return response.json();
+    } catch (fetcherror) {
+      return '';
+    }
     //fetch(args.TARGETURL, { method: 'GET' })
       //.then((response) => {
       //return response;
