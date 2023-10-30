@@ -1,8 +1,8 @@
 class stupidity { 
   getInfo() {
     return {
-      id: 'utilityfunctionsaddon',
-      name: 'Extra Utilities',
+      id: 'stupidity',
+      name: 'Stupidity',
       blocks: [
         {
           opcode: 'converttextcase',
