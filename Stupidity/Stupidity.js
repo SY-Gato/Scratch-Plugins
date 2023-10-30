@@ -11,7 +11,7 @@ class stupidity {
           arguments: {
             TEXT: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'Hello'
+              defaultValue: 'Stupidity'
             },
             CASE: {
               type: Scratch.ArgumentType.STRING,
@@ -22,13 +22,20 @@ class stupidity {
         {
           opcode: 'enc/dectext',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Do [ENCODEORDECODE] string [STRINGTOENCODEORDECODE] to [FORMAT]',
+          text: 'Do [ENCODEORDECODE] string [STRINGTOENCODEORDECODE] to [FORMATALG]',
           arguments: {
             ENCODEORDECODE: {
               type: Scratch.ArgumentType.STRING,
               menu: 'ENCODE_OR_DECODE'
             },
-            STRING
+            STRINGTOENCODEORDECODE: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'Stupidity'
+            },
+            FORMATALG: {
+              type: Scratch.ArgumentType.STRING,
+              menu: 'ENCODE_OR_DECODE_ALGORITHM'
+            },
           },
         },
       ],
@@ -36,6 +43,14 @@ class stupidity {
         STRING_CASE_MENU: {
           acceptReporters: true,
           items: ['Uppercase', 'Lowercase']
+        },
+        ENCODE_OR_DECODE: {
+          acceptReporters: false,
+          items: ['Encode', 'Decode']
+        },
+        ENCODE_OR_DECODE_ALGORITHM: {
+          acceptReporters: false,
+          items: ['Base64', 'Base64Url']
         },
       },
     };
