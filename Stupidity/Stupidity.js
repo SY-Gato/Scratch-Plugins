@@ -20,14 +20,15 @@ class stupidity {
           },
         },
         {
-          opcode: 'somethin',
+          opcode: 'enc/dectext',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'fetch data from [TARGETURL] with method GET',
+          text: 'Do [ENCODEORDECODE] string [STRINGTOENCODEORDECODE] to [FORMAT]',
           arguments: {
-            TARGETURL: {
+            ENCODEORDECODE: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'https://extensions.turbowarp.org/hello.txt'
+              menu: 'ENCODE_OR_DECODE'
             },
+            STRING
           },
         },
       ],
