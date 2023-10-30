@@ -20,7 +20,7 @@ class stupidity {
           },
         },
         {
-          opcode: 'enc/dectext',
+          opcode: 'encordectext',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Do [ENCODEORDECODE] string [STRINGTOENCODEORDECODE] to [FORMATALG]',
           arguments: {
@@ -63,8 +63,16 @@ class stupidity {
       return args.TEXT.toString().toLowerCase();
     }
   }
-  fetchdatafromurl(args) {
-
+  encordectext(args) {
+    if (args.ENCODEORDECODE === 'Encode') {
+      if (args.FORMATALG === 'Base64') {
+        return toString(btoa(args.STRINGTOENCODEORDECODE));
+      }
+    } else {
+      if (args.FORMATALG === 'Base64') {
+        return toString(atob(args.STRINGTOENCODEORDECODE));
+      }
+    }
   }
 }
 Scratch.extensions.register(new stupidity());
