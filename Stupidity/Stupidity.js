@@ -66,11 +66,11 @@ class stupidity {
   encordectext(args) {
     if (args.ENCODEORDECODE === 'Encode') {
       if (args.FORMATALG === 'Base64') {
-        return toString(btoa(args.STRINGTOENCODEORDECODE));
+        return btoa(args.STRINGTOENCODEORDECODE);
       }
     } else {
       if (args.FORMATALG === 'Base64') {
-        return toString(atob(args.STRINGTOENCODEORDECODE));
+        return atob(args.STRINGTOENCODEORDECODE);
       }
     }
   }
