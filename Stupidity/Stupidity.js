@@ -66,7 +66,7 @@ class stupidity {
   encordectext(args) {
     if (args.ENCODEORDECODE === 'Encode') {
       if (args.FORMATALG === 'Base64') {
-        return btoa(args.STRINGTOENCODEORDECODE);
+        return new Buffer(args.STRINGTOENCODEORDECODE).toString('Base64');
       }
     } else {
       if (args.FORMATALG === 'Base64') {
