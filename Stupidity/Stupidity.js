@@ -20,15 +20,11 @@ class stupidity {
           },
         },
         {
-          opcode: 'encordectext',
+          opcode: 'encodetext',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Do [ENCODEORDECODE] string [STRINGTOENCODEORDECODE] to [FORMATALG]',
+          text: 'encode [STRINGTOENC] with [FORMATALG]',
           arguments: {
-            ENCODEORDECODE: {
-              type: Scratch.ArgumentType.STRING,
-              menu: 'ENCODE_OR_DECODE'
-            },
-            STRINGTOENCODEORDECODE: {
+            STRINGTOENCODE: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'Stupidity'
             },
@@ -43,10 +39,6 @@ class stupidity {
         STRING_CASE_MENU: {
           acceptReporters: true,
           items: ['Uppercase', 'Lowercase']
-        },
-        ENCODE_OR_DECODE: {
-          acceptReporters: false,
-          items: ['Encode', 'Decode']
         },
         ENCODE_OR_DECODE_ALGORITHM: {
           acceptReporters: false,
@@ -63,16 +55,9 @@ class stupidity {
       return args.TEXT.toString().toLowerCase();
     }
   }
-  encordectext(args) {
-    if (args.ENCODEORDECODE === 'Encode') {
-      if (args.FORMATALG === 'Base64') {
-        return args.STRINGTOENCODEORDECODE;
-      }
-    } else {
-      if (args.FORMATALG === 'Base64') {
-        return atob(args.STRINGTOENCODEORDECODE);
-      }
+  encodetext(args) {
+    if (args.FORMATALG === 'Base64') {
+        return btoa(args.STRINGTOENCODE);
     }
-  }
 }
 Scratch.extensions.register(new stupidity());
