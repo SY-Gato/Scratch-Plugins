@@ -56,8 +56,12 @@ class stupidity {
     }
   }
   encodetext(args) {
-    if (args.FORMATALG === 'Base64') {
+    try {
+      if (args.FORMATALG === 'Base64') {
         return btoa(args.STRINGTOENCODE);
+      }
+    } catch (e) {
+      return '';
     }
 }
 Scratch.extensions.register(new stupidity());
