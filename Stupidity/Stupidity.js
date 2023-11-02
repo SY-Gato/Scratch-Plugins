@@ -20,7 +20,7 @@ class stupidity {
           },
         },
         {
-          opcode: 'encodetext',
+          opcode: 'encodethetext',
           blockType: Scratch.BlockType.REPORTER,
           text: 'encode [STRINGTOENC] with [FORMATALG]',
           arguments: {
@@ -55,7 +55,7 @@ class stupidity {
       return args.TEXT.toString().toLowerCase();
     }
   }
-  encodetext(args) {
+  encodethetext(args) {
     try {
       if (args.FORMATALG === 'Base64') {
         return btoa(args.STRINGTOENC);
