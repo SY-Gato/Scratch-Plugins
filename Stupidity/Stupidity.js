@@ -1,5 +1,5 @@
 if (!Scratch.extensions.unsandboxed) {
-  throw new Error("Local Storage must be run unsandboxed");
+  throw new Error("Stupidity must be run unsandboxed");
 }
 class stupidity { 
   getInfo() {
