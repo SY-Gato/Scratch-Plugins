@@ -61,8 +61,9 @@ class stupidity {
   encodethetext(args) {
     try {
       if (args.FORMATALG === 'Base64') {
-        alert(btoa(args.STRINGTOENC));
-        return 'Yes';
+        let encodedtextout = btoa(args.STRINGTOENC);
+        alert(encodedtextout);
+        return encodedtextout;
       }
     } catch (e) {
       return '';
