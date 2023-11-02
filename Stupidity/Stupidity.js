@@ -62,7 +62,6 @@ class stupidity {
     try {
       if (args.FORMATALG === 'Base64') {
         let encodedtextout1 = btoa(args.STRINGTOENC);
-        alert(encodedtextout1);
         return encodedtextout1;
       } else {
         let encodedtextout2 = encodeURIComponent(args.STRINGTOENC);
