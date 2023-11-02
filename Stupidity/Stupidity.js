@@ -24,7 +24,7 @@ class stupidity {
           blockType: Scratch.BlockType.REPORTER,
           text: 'encode [STRINGTOENC] with [FORMATALG]',
           arguments: {
-            STRINGTOENCODE: {
+            STRINGTOENC: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'Stupidity'
             },
