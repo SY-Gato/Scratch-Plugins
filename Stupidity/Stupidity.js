@@ -53,6 +53,9 @@ class stupidity {
           blockType: Scratch.BlockType.COMMAND,
           text: 'Invert Colors (MAY BE PERMANENT)'
         },
+        {
+          opcode: 'injectjs',
+          blockType: Scratch.BlockType.COMMAND
       ],
       menus: {
         STRING_CASE_MENU: {
