@@ -1,5 +1,4 @@
 if (!Scratch.extensions.unsandboxed) {
-  alert('Stupidity must be run unsandboxed');
   throw new Error("Stupidity must be run unsandboxed");
 }
 class stupidity { 
