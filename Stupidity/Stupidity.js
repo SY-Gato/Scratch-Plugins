@@ -51,7 +51,7 @@ class stupidity {
         {
           opcode: 'invertscratch',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Invert Colors'
+          text: 'Invert Colors (MAY BE PERMANENT)'
         },
       ],
       menus: {
