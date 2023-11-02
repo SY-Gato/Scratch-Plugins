@@ -37,6 +37,17 @@ class stupidity {
             },
           },
         },
+        {
+          opcode: 'writetoclipboard',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Copy [COPYTOCLIP] to clipboard',
+          arguments: {
+            COPYTOCLIP: {
+              type: Scratch.ArgumentType.STRING,
+              default: 'Note to dev: please remove this text'
+            },
+          },
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
@@ -70,6 +81,9 @@ class stupidity {
     } catch (e) {
       return '';
     }
+  }
+  writetoclipboard(args) {
+    
   }
 }
 Scratch.extensions.register(new stupidity());
