@@ -38,11 +38,11 @@ class stupidity {
           },
         },
         {
-          opcode: 'writetoclipboard',
+          opcode: 'funnies',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Copy [COPYTOCLIP] to clipboard',
+          text: 'Do funnies with input [FUNNIESINPUT]',
           arguments: {
-            COPYTOCLIP: {
+            FUNNIESINPUT: {
               type: Scratch.ArgumentType.STRING,
               default: 'Note to dev: please remove this text'
             },
