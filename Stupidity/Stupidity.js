@@ -63,5 +63,6 @@ class stupidity {
     } catch (e) {
       return '';
     }
+  }
 }
 Scratch.extensions.register(new stupidity());
