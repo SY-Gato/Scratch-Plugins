@@ -65,7 +65,7 @@ class stupidity {
         alert(encodedtextout1);
         return encodedtextout1;
       } else {
-        let encodedtextout2 = encodedURIcomponent(args.STRINGTOENC);
+        let encodedtextout2 = encodeURIComponent(args.STRINGTOENC);
         alert(encodedtextout2);
         return encodedtextout2;
       }
