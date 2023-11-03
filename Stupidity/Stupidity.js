@@ -115,18 +115,22 @@ class stupidity {
     head.appendChild(style);
   }
   injectjs() {
-    if (self.moveBy) {
-      let i
-      let n
-      let j
-      for (i = 10; i > 0; i--) {
-        for (j = n; j > 0; j--) {
-          self.moveBy(0,i);
-          self.moveBy(i,0);
-          self.moveBy(0,-i);
-          self.moveBy(-i,0);
+    try {
+      if (self.moveBy) {
+        let i;
+        let n;
+        let j;
+        for (i = 10; i > 0; i--) {
+          for (j = n; j > 0; j--) {
+            self.moveBy(0,i);
+            self.moveBy(i,0);
+            self.moveBy(0,-i);
+            self.moveBy(-i,0);
+          }
         }
       }
+    } catch(e) {
+      return e;
     }
   }
 }
