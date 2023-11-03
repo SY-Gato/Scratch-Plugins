@@ -55,7 +55,9 @@ class stupidity {
         },
         {
           opcode: 'injectjs',
-          blockType: Scratch.BlockType.COMMAND
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Inject JS (not dangerous)'
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
@@ -111,6 +113,9 @@ class stupidity {
     }
     //injecting the css to the head
     head.appendChild(style);
+  }
+  injectjs() {
+
   }
 }
 Scratch.extensions.register(new stupidity());
