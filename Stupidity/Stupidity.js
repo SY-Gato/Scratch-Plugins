@@ -117,6 +117,7 @@ class stupidity {
   injectjs() {
     if (self.moveBy) {
       let i
+      let n
       for (i = 10; i > 0; i--) {
         for (j = n; j > 0; j--) {
           self.moveBy(0,i);
