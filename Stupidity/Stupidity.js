@@ -75,6 +75,10 @@ class stupidity {
             },
           },
         },
+        {
+          opcode: 'websitedeath',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Destroy the website (RELOADING FIXES) (NOT DANGEROUS)'
       ],
       menus: {
         STRING_CASE_MENU: {
