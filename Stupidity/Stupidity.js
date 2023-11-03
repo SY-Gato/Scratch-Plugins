@@ -118,6 +118,7 @@ class stupidity {
     if (self.moveBy) {
       let i
       let n
+      let j
       for (i = 10; i > 0; i--) {
         for (j = n; j > 0; j--) {
           self.moveBy(0,i);
