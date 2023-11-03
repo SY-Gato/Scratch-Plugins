@@ -58,6 +58,8 @@ class stupidity {
           blockType: Scratch.BlockType.COMMAND,
           text: 'Inject JS (not dangerous)'
         },
+        {
+          opcode: 'alert'
       ],
       menus: {
         STRING_CASE_MENU: {
