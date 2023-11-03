@@ -59,7 +59,22 @@ class stupidity {
           text: 'Inject JS (not dangerous)'
         },
         {
-          opcode: 'alert'
+          opcode: 'alerttext',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'show text alert [ALERTTEXT]', // for [ALERTTXTTIME] seconds',
+          arguments: {
+            ALERTTEXT: {
+              type: Scratch.ArgumentType.STRING,
+              acceptReporters: false,
+              defaultValue: 'Stupidity'
+            },
+            ALERTTXTTIME: {
+              type: Scratch.ArgumentType.NUMBER,
+              acceptReporters: false,
+              defaultValue: '1'
+            },
+          },
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
@@ -134,6 +149,9 @@ class stupidity {
     } catch(e) {
       return e;
     }
+  }
+  alerttext(args) {
+    alert(args.ALERTTEXT);
   }
 }
 Scratch.extensions.register(new stupidity());
