@@ -54,9 +54,12 @@ class stupidity {
           text: 'Invert Colors (MAY BE PERMANENT)'
         },
         {
-          opcode: 'injectjs',
+          opcode: 'injectcustomcss',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Inject JS (not dangerous)'
+          text: 'Inject CSS [CSSTOINJECT] (not dangerous)',
+          arguments: {
+            CSSTOINJECT: {
+              type: Scratch
         },
         {
           opcode: 'alerttext',
