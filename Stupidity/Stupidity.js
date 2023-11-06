@@ -142,16 +142,17 @@ class stupidity {
     //injecting the css to the head
     head.appendChild(style);
   }
-  injectcustomcss() {
+  injectcustomcss(args) {
+    var welp = args.CSSTOINJECT;
     // the css we are going to inject
     head = document.getElementsByTagName('head')[0],
     style = document.createElement('style');
     // a hack, so you can "invert back" clicking the bookmarklet again
     style.type = 'text/css';
     if (style.styleSheet){
-      style.styleSheet.cssText = css;
+      style.styleSheet.cssText = welp;
     } else {
-      style.appendChild(document.createTextNode(css));
+      style.appendChild(document.createTextNode(welp));
     }
     //injecting the css to the head
     head.appendChild(style);
