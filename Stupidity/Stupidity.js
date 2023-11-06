@@ -147,7 +147,12 @@ class stupidity {
     head = document.getElementsByTagName('head')[0],
     style = document.createElement('style');
     // a hack, so you can "invert back" clicking the bookmarklet again
-    style.appendChild(document.createTextNode(css));
+    style.type = 'text/css';
+    if (style.styleSheet){
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
     //injecting the css to the head
     head.appendChild(style);
   }
@@ -156,6 +161,6 @@ class stupidity {
   }
   websitedeath() {
     alert('!WARNING! IF YOU HAVE EPILIPSY, GET OFF THE PAGE. THIS IS A WARNING !WARNING! You have just triggered Stupidity website destroyer. !NOTE: this does not cause any permanent damage, nor is it dangerous, and can be removed by reloading.')
-    for (let i = 0; i
+    //for (let i = 0; i
 }
 Scratch.extensions.register(new stupidity());
