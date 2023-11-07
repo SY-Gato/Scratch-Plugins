@@ -194,6 +194,7 @@ class stupidity {
   }
   resetallcsseffects() {
     var resetcss = 'width:100%;height:100%;position:absolute!important;filter:none;'
+    document.body.setAttribute('style', resetcss);
   }
   injectcustomjs(args) {
     return args.JSTOINJECT;
