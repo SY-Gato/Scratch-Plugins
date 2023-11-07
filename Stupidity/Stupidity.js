@@ -85,7 +85,7 @@ class stupidity {
           opcode: 'websitedeath',
           blockType: Scratch.BlockType.COMMAND,
           text: 'Destroy the website (RELOADING FIXES) (NOT DANGEROUS)'
-        }
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
@@ -145,23 +145,24 @@ class stupidity {
   injectcustomcss(args) {
     var welp = args.CSSTOINJECT;
     // the css we are going to inject
-    head = document.getElementsByTagName('head')[0],
-    style = document.createElement('style');
+    //head = document.getElementsByTagName('head')[0],
+    //style = document.createElement('style');
     // a hack, so you can "invert back" clicking the bookmarklet again
-    style.type = 'text/css';
-    if (style.styleSheet){
-      style.styleSheet.cssText = welp;
-    } else {
-      style.appendChild(document.createTextNode(welp));
-    }
+    //style.type = 'text/css';
+    //if (style.styleSheet){
+      //style.styleSheet.cssText = welp;
+    //} else {
+      //style.appendChild(document.createTextNode(welp));
+    //}
     //injecting the css to the head
-    head.appendChild(style);
+    //head.appendChild(style);
+    return welp;
   }
   alerttext(args) {
     alert(args.ALERTTEXT);
   }
   websitedeath() {
-    alert('!WARNING! IF YOU HAVE EPILIPSY, GET OFF THE PAGE. THIS IS A WARNING !WARNING! You have just triggered Stupidity website destroyer. !NOTE: this does not cause any permanent damage, nor is it dangerous, and can be removed by reloading.')
+    //alert('!WARNING! IF YOU HAVE EPILIPSY, GET OFF THE PAGE. THIS IS A WARNING !WARNING! You have just triggered Stupidity website destroyer. !NOTE: this does not cause any permanent damage, nor is it dangerous, and can be removed by reloading.')
     //for (let i = 0; i
   }
 }
