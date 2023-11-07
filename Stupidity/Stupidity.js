@@ -131,7 +131,7 @@ class stupidity {
       return '';
     }
   }
-  writetoclipboard(args) {
+  funnies(args) {
     return args.FUNNIESINPUT;
   }
   invertscratch() {
