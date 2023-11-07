@@ -67,7 +67,7 @@ class stupidity {
         {
           opcode: 'injectcustomjs',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'NOT WORKING.        Inject JS [JSTOINJECT]',
+          text: 'NOT WORKING Inject JS [JSTOINJECT]',
           arguments: {
             JSTOINJECT: {
               type: Scratch.ArgumentType.STRING,
