@@ -24,3 +24,4 @@ Also pretty simple. Input some text, and it will show an alert in your browser w
 
 5. Inject Custom CSS
 This one is more complicated. You can do all your normal CSS effects, but here are some basic effects for beginners.
+For the effects, visit: https://developer.mozilla.org/en-US/docs/Web/CSS/filter
