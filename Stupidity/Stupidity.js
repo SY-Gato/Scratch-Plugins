@@ -120,7 +120,7 @@ class stupidity {
         },
         ENCODE_OR_DECODE_ALGORITHM: {
           acceptReporters: false,
-          items: ['Base64', 'Encode/DecodeURIComponent']
+          items: ['Base64', 'EncodeURIComponent']
         },
       },
     };
