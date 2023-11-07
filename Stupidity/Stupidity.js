@@ -71,7 +71,7 @@ class stupidity {
           arguments: {
             JSTOINJECT: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'alert("hello there");'
+              defaultValue: 'alert();'
             },
           },
         {
