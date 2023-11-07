@@ -38,6 +38,20 @@ class stupidity {
           },
         },
         {
+          opcode: 'decodethetext',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'decode [STRINGTODEC] with [DECODEALG]',
+          arguments: {
+            STRINGTODEC: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'U3R1cGlkaXR5'
+            },
+            DECODEALG: {
+              type: Scratch.ArgumentType.STRING,
+              menu: 'ENCODE_OR_DECODE_ALGORITHM'
+          },
+        },
+        {
           opcode: 'funnies',
           blockType: Scratch.BlockType.COMMAND,
           text: 'Do funnies with input [FUNNIESINPUT]',
@@ -105,7 +119,7 @@ class stupidity {
         },
         ENCODE_OR_DECODE_ALGORITHM: {
           acceptReporters: false,
-          items: ['Base64', 'EncodeURIComponent']
+          items: ['Base64', 'Encode/DecodeURIComponent']
         },
       },
     };
@@ -125,6 +139,19 @@ class stupidity {
         return encodedtextout1;
       } else {
         let encodedtextout2 = encodeURIComponent(args.STRINGTOENC);
+        return encodedtextout2;
+      }
+    } catch (e) {
+      return '';
+    }
+  }
+  decodethetext(args) {
+    try {
+      if (args.FORMATALG === 'Base64') {
+        let encodedtextout1 = atob(args.STRINGTOENC);
+        return encodedtextout1;
+      } else {
+        let encodedtextout2 = decodeURIComponent(args.STRINGTOENC);
         return encodedtextout2;
       }
     } catch (e) {
