@@ -65,6 +65,16 @@ class stupidity {
           },
         },
         {
+          opcode: 'injectcustomjs',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Inject JS [JSTOINJECT]',
+          arguments: {
+            JSTOINJECT: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'alert("hello there");'
+            },
+          },
+        {
           opcode: 'alerttext',
           blockType: Scratch.BlockType.COMMAND,
           text: 'show text alert [ALERTTEXT]', // for [ALERTTXTTIME] seconds',
