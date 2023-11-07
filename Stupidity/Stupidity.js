@@ -83,6 +83,7 @@ class stupidity {
           opcode: 'resetallcsseffects',
           type: Scratch.BlockType.COMMAND,
           text: 'Reset all css effects'
+        },
         {
           opcode: 'injectcustomjs',
           blockType: Scratch.BlockType.COMMAND,
