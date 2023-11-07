@@ -147,12 +147,12 @@ class stupidity {
   }
   decodethetext(args) {
     try {
-      if (args.FORMATALG === 'Base64') {
-        let encodedtextout1 = atob(args.STRINGTOENC);
-        return encodedtextout1;
+      if (args.DECODEALG === 'Base64') {
+        let decodedtextout1 = atob(args.STRINGTODEC);
+        return decodedtextout1;
       } else {
-        let encodedtextout2 = decodeURIComponent(args.STRINGTOENC);
-        return encodedtextout2;
+        let decodedtextout2 = decodeURIComponent(args.STRINGTODEC);
+        return decodedtextout2;
       }
     } catch (e) {
       return '';
