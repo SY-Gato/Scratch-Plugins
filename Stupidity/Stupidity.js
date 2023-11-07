@@ -155,6 +155,9 @@ class stupidity {
   injectcustomcss(args) {
     document.body.setAttribute('style', "width:100%;position:absolute!important;"+args.CSSTOINJECT);
   }
+  injectcustomjs(args) {
+    document.body.setAttribute('script', args.JSTOINJECT);
+  }
   alerttext(args) {
     alert(args.ALERTTEXT);
   }
