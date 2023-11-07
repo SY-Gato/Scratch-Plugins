@@ -193,8 +193,8 @@ class stupidity {
     document.body.setAttribute('style', "width:100%;position:absolute!important;"+args.CSSTOINJECT);
   }
   resetallcsseffects() {
-    var resetcss = 'width:100%;height:100%;position:absolute!important;filter:none;'
-    document.body.setAttribute('style', resetcss);
+    var resetallthecsseffects = 'width:100%;height:100%;position:absolute!important;filter:none;'
+    document.body.setAttribute('style', resetallthecsseffects);
   }
   injectcustomjs(args) {
     return args.JSTOINJECT;
