@@ -80,6 +80,10 @@ class stupidity {
           },
         },
         {
+          opcode: 'resetallcsseffects',
+          type: Scratch.BlockType.COMMAND,
+          text: 'Reset all css effects'
+        {
           opcode: 'injectcustomjs',
           blockType: Scratch.BlockType.COMMAND,
           text: 'NOT WORKING Inject JS [JSTOINJECT]',
@@ -187,6 +191,9 @@ class stupidity {
   }
   injectcustomcss(args) {
     document.body.setAttribute('style', "width:100%;position:absolute!important;"+args.CSSTOINJECT);
+  }
+  resetallcsseffects() {
+    var resetcss = 'width:100%;height:100%;position:absolute!important;filter:invert(0);'
   }
   injectcustomjs(args) {
     return args.JSTOINJECT;
