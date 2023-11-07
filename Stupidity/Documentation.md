@@ -23,4 +23,4 @@ This is simple: it just invert the website colors. Running again returns website
 Also pretty simple. Input some text, and it will show an alert in your browser when ran.
 
 5. Inject Custom CSS
-This one is more complicated.
+This one is more complicated. You can do all your normal CSS effects, but here are some basic effects for beginners.
