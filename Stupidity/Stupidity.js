@@ -49,6 +49,7 @@ class stupidity {
             DECODEALG: {
               type: Scratch.ArgumentType.STRING,
               menu: 'ENCODE_OR_DECODE_ALGORITHM'
+            },
           },
         },
         {
