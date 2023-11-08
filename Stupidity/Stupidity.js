@@ -33,24 +33,24 @@
                 type: Scratch.ArgumentType.STRING,
                 defaultValue: 'Stupidity'
               },
-            FORMATALG: {
-              type: Scratch.ArgumentType.STRING,
-              menu: 'ENCODE_OR_DECODE_ALGORITHM'
+              FORMATALG: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'ENCODE_OR_DECODE_ALGORITHM'
+              },
             },
           },
-        },
-        {
-          opcode: 'decodethetext',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'decode [STRINGTODEC] with [DECODEALG]',
-          arguments: {
-            STRINGTODEC: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'U3R1cGlkaXR5'
-            },
-            DECODEALG: {
-              type: Scratch.ArgumentType.STRING,
-              menu: 'DECODE_ALGORITHM'
+          {
+            opcode: 'decodethetext',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'decode [STRINGTODEC] with [DECODEALG]',
+            arguments: {
+              STRINGTODEC: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: 'U3R1cGlkaXR5'
+              },
+              DECODEALG: {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'DECODE_ALGORITHM'
             },
           },
         },
