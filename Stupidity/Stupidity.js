@@ -27,12 +27,12 @@
           {
             opcode: 'encodethetext',
             blockType: Scratch.BlockType.REPORTER,
-          text: 'encode [STRINGTOENC] with [FORMATALG]',
-          arguments: {
-            STRINGTOENC: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'Stupidity'
-            },
+            text: 'encode [STRINGTOENC] with [FORMATALG]',
+            arguments: {
+              STRINGTOENC: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: 'Stupidity'
+              },
             FORMATALG: {
               type: Scratch.ArgumentType.STRING,
               menu: 'ENCODE_OR_DECODE_ALGORITHM'
@@ -212,3 +212,4 @@
   }
 }
 Scratch.extensions.register(new stupidity());
+})(Scratch);
