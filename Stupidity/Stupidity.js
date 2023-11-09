@@ -8,6 +8,7 @@
       return {
         id: 'stupidity',
         name: 'Stupidity',
+        docsURI: 'https://
         blocks: [
           {
             opcode: 'converttextcase',
