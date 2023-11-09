@@ -8,7 +8,7 @@
       return {
         id: 'stupidity',
         name: 'Stupidity',
-        docsURI: 'https://
+        docsURI: 'https://github.com/SY-Gato/Scratch-Plugins/blob/main/Stupidity/Documentation.md',
         blocks: [
           {
             opcode: 'converttextcase',
