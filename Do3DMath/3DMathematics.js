@@ -19,13 +19,19 @@
           {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'All Block RotX'
+            text: 'All Block RotX [HI]',
+            arguments: {
+              HI: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: 'Hi'
+              },
+            },
           },
         ],
       };
     }
-    allblockrotx() {
-      return 'hi';
+    allblockrotx(args) {
+      return args.HI;
     }
   }
   Scratch.extensions.register(new Mathematics3D());
