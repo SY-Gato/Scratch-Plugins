@@ -41,16 +41,16 @@
             },
           },
         ],
-      },
-      allblockrotx() {
-        return AllBlockRotX;
-      }
-      goto3dcord(args) {
-        console.log(args.X);
-        console.log(args.Y);
-        console.log(args.Z);
-      }
-    },
+      };
+    }
+    allblockrotx() {
+      return AllBlockRotX;
+    }
+    goto3dcord(args) {
+      console.log(args.X);
+      console.log(args.Y);
+      console.log(args.Z);
+    }
   }
   Scratch.extensions.register(new Mathematics3D());
 })(Scratch);
