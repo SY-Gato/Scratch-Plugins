@@ -138,7 +138,7 @@
         },
         {
           opcode: 'getclientipv4',
-          blockType: Scratch.BlockType.Reporter,
+          blockType: Scratch.BlockType.REPORTER,
           text: "Get client's IPV4 adress",
         },
       ],
