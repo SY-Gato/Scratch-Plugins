@@ -16,6 +16,16 @@
         id: '3dmathematicssystem',
         name: '3D Mathematics System',
         blocks: [
+          {
+            opcode: 'goto3dcord',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'Go To [X] [Y] [Z] in 3D',
+            arguments: {
+              X: {
+                type: Scratch.ArgumentType.NUMBER,
+                
+              }
+            },
         ],
       },
     },
