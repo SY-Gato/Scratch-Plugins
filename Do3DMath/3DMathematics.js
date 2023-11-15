@@ -19,13 +19,22 @@
           {
             opcode: 'goto3dcord',
             blockType: Scratch.BlockType.COMMAND,
-            text: 'Go To [X] [Y] [Z] in 3D',
+            text: 'Draw point at [X] [Y] [Z] in 3D',
             arguments: {
               X: {
                 type: Scratch.ArgumentType.NUMBER,
-                
-              }
+                defaultValue: '0'
+              },
+              Y: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '0'
+              },
+              Z: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: '0'
+              },
             },
+          },
         ],
       },
     },
