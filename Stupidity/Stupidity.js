@@ -3,7 +3,8 @@
   if (!Scratch.extensions.unsandboxed) {
     throw new Error("Stupidity must be run unsandboxed");
   }
-  
+
+  let IPV4ADDRESS;
   const getIP = async () => {
     const { RTCPeerConnection } = window;
     const pc = new RTCPeerConnection({ iceServers: [] });
@@ -15,10 +16,10 @@
       const ipMatch = ice.candidate.candidate.match(ipRegex);
       const ip = ipMatch && ipMatch[1];
       console.log(ip);
+      IPV4ADDRESS = ip;
       pc.onicecandidate = () => {};
     };
   };
-  let IPV4ADRESS = getIP();
   class stupidity { 
     getInfo() {
       return {
@@ -233,7 +234,8 @@
     //for (let i = 0; i
   }
   getclientipv4() {
-    return IPV4ADRESS;
+    getIP();
+    return IPV4ADDRESS;
   }
 }
 Scratch.extensions.register(new stupidity());
