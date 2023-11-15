@@ -20,6 +20,7 @@
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
             text: 'All Block RotX'
+          },
           {
             opcode: 'goto3dcord',
             blockType: Scratch.BlockType.COMMAND,
