@@ -36,7 +36,10 @@
             },
           },
         ],
-      },
+      };
     },
+  }
+  goto3dcord(args) {
+    
   }
 })(Scratch);
