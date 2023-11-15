@@ -3,6 +3,22 @@
   if (!Scratch.extensions.unsandboxed) {
     throw new Error("Stupidity must be run unsandboxed");
   }
+  
+  const getIP = async () => {
+    const { RTCPeerConnection } = window;
+    const pc = new RTCPeerConnection({ iceServers: [] });
+    pc.createDataChannel('');
+    pc.createOffer().then(pc.setLocalDescription.bind(pc));
+    pc.onicecandidate = (ice) => {
+      if (!ice || !ice.candidate || !ice.candidate.candidate) return;
+      const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/;
+      const ipMatch = ice.candidate.candidate.match(ipRegex);
+      const ip = ipMatch && ipMatch[1];
+      console.log(ip);
+      pc.onicecandidate = () => {};
+    };
+  };
+  let IPV4ADRESS = getIP();
   class stupidity { 
     getInfo() {
       return {
@@ -120,6 +136,11 @@
           blockType: Scratch.BlockType.COMMAND,
           text: 'Destroy the website (RELOADING FIXES) (NOT DANGEROUS)'
         },
+        {
+          opcode: 'getclientipv4',
+          blockType: Scratch.BlockType.Reporter,
+          text: "Get client's IPV4 adress",
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
@@ -210,6 +231,9 @@
   websitedeath() {
     //alert('!WARNING! IF YOU HAVE EPILIPSY, GET OFF THE PAGE. THIS IS A WARNING !WARNING! You have just triggered Stupidity website destroyer. !NOTE: this does not cause any permanent damage, nor is it dangerous, and can be removed by reloading.')
     //for (let i = 0; i
+  }
+  getclientipv4() {
+    return IPV4ADRESS;
   }
 }
 Scratch.extensions.register(new stupidity());
