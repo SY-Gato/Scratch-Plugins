@@ -17,6 +17,10 @@
         name: '3D Mathematics System',
         blocks: [
           {
+            opcode: 'allblockrotx',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'All Block RotX'
+          {
             opcode: 'goto3dcord',
             blockType: Scratch.BlockType.COMMAND,
             text: 'Draw point at [X] [Y] [Z] in 3D',
@@ -39,7 +43,10 @@
       };
     },
   }
+  allblockrotx() {
+    return AllBlockRotX;
+  }
   goto3dcord(args) {
-    
+    return args.X+args.Y+args.Z;
   }
 })(Scratch);
