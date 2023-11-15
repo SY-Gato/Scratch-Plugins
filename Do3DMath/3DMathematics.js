@@ -10,8 +10,14 @@
   let AllBlockRotX;
   let AllBlockRotY;
   // Blocks
-  class Mathematics3D
+  class Mathematics3D {
     getInfo() {
       return {
-      
+        id: '3dmathematicssystem',
+        name: '3D Mathematics System',
+        blocks: [
+        ],
+      },
+    },
+  }
 })(Scratch);
