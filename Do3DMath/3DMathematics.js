@@ -49,4 +49,5 @@
   goto3dcord(args) {
     return args.X+args.Y+args.Z;
   }
+  Scratch.extensions.register(new Mathematics3D());
 })(Scratch);
