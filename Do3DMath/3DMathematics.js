@@ -7,13 +7,13 @@
   //let Cam3DxPos;
   //let Cam3DyPos;
   //let Cam3DzPos;
-  //let AllBlockRotX;
+  let AllBlockRotX = 0;
   //let AllBlockRotY;
   // Blocks
   class Mathematics3D {
     getInfo() {
       return {
-        id: '3dmathematicssystem',
+        id: '3dmathematicssys',
         name: '3D Mathematics System',
         blocks: [
           {
@@ -31,7 +31,7 @@
       };
     }
     allblockrotx() {
-      return "Hello World!";
+      return AllBlockRotX;
     }
   }
   Scratch.extensions.register(new Mathematics3D());
