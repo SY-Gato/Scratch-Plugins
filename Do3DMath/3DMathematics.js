@@ -4,7 +4,7 @@
     throw new Error('3DMathematics must run unsandboxed');
   }
   // Required Variables
-  //let Cam3DxPos;
+  let Cam3DxPos = 0;
   //let Cam3DyPos;
   //let Cam3DzPos;
   let AllBlockRotX = 0;
@@ -17,12 +17,20 @@
         name: '3D Mathematics System',
         blocks: [
           {
+            opcode: 'camxposreturn',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'Cam XPos'
+          },
+          {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
             text: 'All Block RotX'
           },
         ],
       };
+    }
+    camxposreturn() {
+      return Cam3DxPos;
     }
     allblockrotx() {
       return AllBlockRotX;
