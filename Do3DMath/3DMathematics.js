@@ -17,8 +17,8 @@
         name: '3D Mathematics System',
         blocks: [
           {
-            opcode: 'NOUSEOPCODE',
-            blockType: Scratch.BlockType.Label,
+            opcode: '_NOUSEOPCODE',
+            blockType: Scratch.BlockType.LABEL,
             text: '3D Variables'
           },
           {
