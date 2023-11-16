@@ -34,10 +34,22 @@
             text: 'Cam YPos'
           },
           {
+            opcode: 'camzposreturn',
+            blockType: Scratch.BlockType.REPORTER,
+            disableMonitor: true,
+            text: 'Cam ZPos'
+          },
+          {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
             disableMonitor: true,
             text: 'All Block RotX'
+          },
+          {
+            opcode: 'allblockroty',
+            blockType: Scratch.BlockType.REPORTER,
+            disableMonitor: true,
+            text: "All Block RotY'
           },
         ],
       };
@@ -48,8 +60,14 @@
     camyposreturn() {
       return Cam3DyPos;
     }
+    camzposreturn() {
+      return Cam3DzPos;
+    }
     allblockrotx() {
       return AllBlockRotX;
+    }
+    allblockroty() {
+      return AllBlockRotY;
     }
   }
   Scratch.extensions.register(new Mathematics3D());
