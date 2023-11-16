@@ -28,6 +28,12 @@
             text: 'Cam XPos'
           },
           {
+            opcode: 'camyposreturn',
+            blockType: Scratch.BlockType.REPORTER,
+            disableMonitor: true,
+            text: 'Cam YPos'
+          },
+          {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
             disableMonitor: true,
@@ -38,6 +44,9 @@
     }
     camxposreturn() {
       return Cam3DxPos;
+    }
+    camyposreturn() {
+      return Cam3DyPos;
     }
     allblockrotx() {
       return AllBlockRotX;
