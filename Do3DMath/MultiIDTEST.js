@@ -27,6 +27,15 @@
             text: 'All Block RotX'
           },
         ],
+        id: '3dmathematicsysdouble',
+        name: '3D Mathematics System Test 2',
+        blocks: [
+          {
+            opcode: 'hello',
+            blockType: Scratch.BlockType.COMMAND,
+            text: 'Hello'
+          },
+        ],
       };
     }
     camxposreturn() {
@@ -34,6 +43,9 @@
     }
     allblockrotx() {
       return AllBlockRotX;
+    }
+    hello() {
+      alert('Hello World');
     }
   }
   Scratch.extensions.register(new Mathematics3D());
