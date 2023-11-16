@@ -19,16 +19,18 @@
           {
             opcode: "__NOUSEOPCODE",
             blockType: Scratch.BlockType.LABEL,
-            text: "Stuff Variables",
+            text: "Variables",
           },
           {
             opcode: 'camxposreturn',
             blockType: Scratch.BlockType.REPORTER,
+            disableMonitor: true,
             text: 'Cam XPos'
           },
           {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
+            disableMonitor: true,
             text: 'All Block RotX'
           },
         ],
