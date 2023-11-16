@@ -17,6 +17,11 @@
         name: '3D Mathematics System',
         blocks: [
           {
+            opcode: 'NOUSEOPCODE',
+            blockType: Scratch.BlockType.Label,
+            text: '3D Variables'
+          },
+          {
             opcode: 'camxposreturn',
             blockType: Scratch.BlockType.REPORTER,
             text: 'Cam XPos'
