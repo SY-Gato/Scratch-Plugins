@@ -19,13 +19,7 @@
           {
             opcode: 'allblockrotx',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'All Block RotX' //[HI]',
-            //arguments: {
-              //HI: {
-                //type: Scratch.ArgumentType.STRING,
-                //defaultValue: 'Hi'
-              //},
-            //},
+            text: 'All Block RotX'
           },
         ],
       };
