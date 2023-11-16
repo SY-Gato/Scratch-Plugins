@@ -19,7 +19,7 @@
           {
             opcode: "__NOUSEOPCODE",
             blockType: Scratch.BlockType.LABEL,
-            text: "3D Variables"
+            text: "Stuff Variables",
           },
           {
             opcode: 'camxposreturn',
