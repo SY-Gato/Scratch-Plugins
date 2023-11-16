@@ -49,7 +49,7 @@
             opcode: 'allblockroty',
             blockType: Scratch.BlockType.REPORTER,
             disableMonitor: true,
-            text: "All Block RotY'
+            text: 'All Block RotY'
           },
         ],
       };
