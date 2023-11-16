@@ -5,10 +5,10 @@
   }
   // Required Variables
   let Cam3DxPos = 0;
-  //let Cam3DyPos;
-  //let Cam3DzPos;
+  let Cam3DyPos = 0;
+  let Cam3DzPos = 0;
   let AllBlockRotX = 0;
-  //let AllBlockRotY;
+  let AllBlockRotY = 0;
   // Blocks
   class Mathematics3D {
     getInfo() {
