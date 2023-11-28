@@ -5,15 +5,15 @@
     throw new Error("Motion Testing must run unsandboxed");
   }
   const Rectangle = Scratch.vm.renderer.exports.rectangle;
-  class testMove() {
+  class testMovebreeeeh() {
     getInfo() {
       return {
-        id: "motion",
+        id: "motionthingyidk",
         name: "motion test",
         blocks: [
           {
             filter: [Scratch.TargetType.SPRITE],
-            opcode: "hi",
+            opcode: "whentheyes",
             blockType: Scratch.BlockType.COMMAND,
             text: "Move me to [XPOS] [YPOS]",
             arguments: {
@@ -30,11 +30,11 @@
         ],
       };
     }
-    hi(args, util) {
+    whentheyes(args, util) {
       const x = Scratch.Cast.toNumber(args.X);
       const y = Scratch.Cast.toNumber(args.Y);
       util.target.SetXY(x, y);
     }
   }
-  Scratch.extensions.register(new testMove());
+  Scratch.extensions.register(new testMovebreeeeh());
 })(Scratch);
