@@ -4,7 +4,7 @@
   if (!Scratch.extensions.unsandboxed) {
     throw new Error("Motion Testing must run unsandboxed");
   }
-  const Rectangle = Scratch.vm.renderer.exports.rectangle;
+  const Rectangle = Scratch.vm.renderer.exports.Rectangle;
   class testMovebreeeeh() {
     getInfo() {
       return {
