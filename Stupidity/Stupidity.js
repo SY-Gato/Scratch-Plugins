@@ -142,6 +142,22 @@
           blockType: Scratch.BlockType.REPORTER,
           text: "Get client's IPV4 adress",
         },
+        {
+          filter: [Scratch.TargetType.SPRITE],
+          opcode: "whentheyes",
+          blockType: Scratch.BlockType.COMMAND,
+          text: "Move me to [XPOS] [YPOS]",
+          arguments: {
+            X: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: "0",
+            },
+            Y: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: "0",
+            },
+          },
+        },
       ],
       menus: {
         STRING_CASE_MENU: {
