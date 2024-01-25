@@ -46,10 +46,14 @@
     allblockrotx() {
       return AllBlockRotX;
     }
-    goto3dcord(args) {
+    goto3dcord(args, util) {
       console.log(args.X);
       console.log(args.Y);
       console.log(args.Z);
+      const x = Scratch.Cast.toNumber(args.X);
+      const y = Scratch.Cast.toNumber(args.Y);
+      const z = Scratch.Cast.toNumber(args.Z);
+      util.target.setXY(x, y);
     }
   }
   Scratch.extensions.register(new Mathematics3D());
