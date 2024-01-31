@@ -253,7 +253,7 @@
     getIP();
     return IPV4ADDRESS;
   }
-  whentheyes(args, util) {
+  pointatxy(args, util) {
     const x = Scratch.Cast.toNumber(args.XPOS);
     const y = Scratch.Cast.toNumber(args.Y);
     if (util.target.y > y) {
@@ -267,6 +267,7 @@
         (180 / Math.PI) * Math.atan((x - util.target.x) / (y - util.target.y))
       );
     }
+  }
 }
 Scratch.extensions.register(new stupidity());
 })(Scratch);
