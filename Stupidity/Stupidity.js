@@ -144,15 +144,15 @@
         },
         {
           filter: [Scratch.TargetType.SPRITE],
-          opcode: "whentheyes",
+          opcode: "pointatxy",
           blockType: Scratch.BlockType.COMMAND,
-          text: "Move me to [XPOS] [YPOS]",
+          text: "Look at XY [XPOS] [YPOS]",
           arguments: {
-            X: {
+            XPOS: {
               type: Scratch.ArgumentType.NUMBER,
               defaultValue: "0",
             },
-            Y: {
+            YPOS: {
               type: Scratch.ArgumentType.NUMBER,
               defaultValue: "0",
             },
@@ -254,9 +254,19 @@
     return IPV4ADDRESS;
   }
   whentheyes(args, util) {
-    const x = Scratch.Cast.toNumber(args.X);
+    const x = Scratch.Cast.toNumber(args.XPOS);
     const y = Scratch.Cast.toNumber(args.Y);
-    util.target.setXY(x, y);
+    if (util.target.y > y) {
+      util.target.setDirection(
+        (180 / Math.PI) *
+        Math.atan((x - util.target.x) / (y - util.target.y)) +
+        180
+      );
+    } else {
+      util.target.setDirection(
+        (180 / Math.PI) * Math.atan((x - util.target.x) / (y - util.target.y))
+      );
+    }
 }
 Scratch.extensions.register(new stupidity());
 })(Scratch);
