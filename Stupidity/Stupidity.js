@@ -253,6 +253,10 @@
     getIP();
     return IPV4ADDRESS;
   }
+  whentheyes(args, util) {
+    const x = Scratch.Cast.toNumber(args.X);
+    const y = Scratch.Cast.toNumber(args.Y);
+    util.target.setXY(x, y);
 }
 Scratch.extensions.register(new stupidity());
 })(Scratch);
