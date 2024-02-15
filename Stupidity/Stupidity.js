@@ -1,8 +1,8 @@
 (function(Scratch) {
   'use strict';
-  if (!Scratch.extensions.unsandboxed) {
+  /*if (!Scratch.extensions.unsandboxed) {
     throw new Error("Stupidity must be run unsandboxed");
-  }
+  }*/
 
   let IPV4ADDRESS;
   const getIP = async () => {
@@ -47,12 +47,23 @@
     };
   }
   class stupidity { 
+    constructor(runtime) {
+      this.runtime = runtime;
+      this.runningEditorUnsandboxed = false;
+    }
     getInfo() {
       return {
         id: 'stupidity',
         name: 'Stupidity',
         docsURI: 'https://github.com/SY-Gato/Scratch-Plugins/blob/main/Stupidity/Documentation.md',
+        isDynamic: true,
         blocks: [
+          {
+            opcode: 'unsandbox',
+            text: 'Run Unsandboxed',
+            blockType: Scratch.BlockType.BUTTON,
+            hideFromPalette: this.runningEditorUnsandboxed
+          },
           {
             opcode: 'converttextcase',
             blockType: Scratch.BlockType.REPORTER,
@@ -112,7 +123,8 @@
         {
           opcode: 'invertscratch',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Invert Colors (MAY BE PERMANENT)'
+          text: 'Invert Colors (MAY BE PERMANENT)',
+          hideFromPalette: !this.runningEditorUnsandboxed
         },
         {
           opcode: 'injectcustomcss',
@@ -201,7 +213,12 @@
       },
     };
   }
-
+  async unsandbox() {
+    const unsandbox = await this.runtime.vm.securityManager.canUnsandbox("Stupidity");
+    if (!unsandbox) return;
+    this.runningEditorUnsandboxed = true;
+    this.runtime.vm.emitWorkspaceUpdate();
+  }
   converttextcase(args) {
     if (args.CASE === 'Uppercase') {
       return args.TEXT.toString().toUpperCase();
