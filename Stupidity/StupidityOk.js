@@ -214,7 +214,7 @@
     };
   }
   async unsandbox() {
-    const unsandbox = await this.runtime.vm.securityManager.canUnsandbox("Stupidity");
+    const unsandbox = await this.runtime.vm.securityManager.canUnsandbox("stupidity");
     if (!unsandbox) return;
     this.runningEditorUnsandboxed = true;
     this.runtime.vm.emitWorkspaceUpdate();
