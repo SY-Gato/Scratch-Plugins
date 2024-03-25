@@ -3,10 +3,10 @@
   // Required Variables
 
   // Blocks
-  class prompt1 {
+  class prompt1Thingy {
     getInfo() {
       return {
-        id: 'prompt1',
+        id: 'promptthingy1',
         name: 'PromptTest1',
         isDynamic: true,
         blocks: [
@@ -31,5 +31,5 @@
       this.runtime.vm.emitWorkspaceUpdate();
     }
   }
-  Scratch.extensions.register(new prompt1());
+  Scratch.extensions.register(new prompt1Thingy());
 })(Scratch);
